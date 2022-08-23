@@ -203,7 +203,7 @@ func NewProcessCollector(options ProcessCollectorOption) (*NamedProcessCollector
 	p.scrapePartialErrors += colErrs.Partial
 	p.scrapeProcReadErrors += colErrs.Read
 
-	go p.start()
+	// go p.start()
 
 	return p, nil
 }
@@ -237,9 +237,10 @@ func (p *NamedProcessCollector) Describe(ch chan<- *prometheus.Desc) {
 
 // Collect implements prometheus.Collector.
 func (p *NamedProcessCollector) Collect(ch chan<- prometheus.Metric) {
-	req := scrapeRequest{results: ch, done: make(chan struct{})}
-	p.scrapeChan <- req
-	<-req.done
+	// req := scrapeRequest{results: ch, done: make(chan struct{})}
+	// p.scrapeChan <- req
+	// <-req.done
+	p.scrape(ch)
 }
 
 func (p *NamedProcessCollector) start() {
