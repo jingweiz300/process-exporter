@@ -3,8 +3,8 @@ package collector
 import (
 	"log"
 
-	common "github.com/ncabatoff/process-exporter"
-	"github.com/ncabatoff/process-exporter/proc"
+	common "github.com/jingweiz300/process-exporter"
+	"github.com/jingweiz300/process-exporter/proc"
 	"github.com/prometheus/client_golang/prometheus"
 )
 

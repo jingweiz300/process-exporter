@@ -11,10 +11,10 @@ import (
 	"strings"
 	"time"
 
+	common "github.com/jingweiz300/process-exporter"
+	"github.com/jingweiz300/process-exporter/collector"
+	"github.com/jingweiz300/process-exporter/config"
 	"github.com/ncabatoff/fakescraper"
-	common "github.com/ncabatoff/process-exporter"
-	"github.com/ncabatoff/process-exporter/collector"
-	"github.com/ncabatoff/process-exporter/config"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	"github.com/prometheus/common/promlog"
